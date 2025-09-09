@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const CTA = () => {
     return (
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-950 relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
@@ -23,7 +23,7 @@ const CTA = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                        <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
+                        <button className="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
                             <span>Start Tracking Now</span>
                             <ArrowRight className="w-5 h-5" />
                         </button>

@@ -92,7 +92,7 @@ const About = () => {
         >
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight md:leading-snug">
   We're building the future of
-  <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+  <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
     task management
   </span>
 </h2>
@@ -119,7 +119,7 @@ const About = () => {
               className="text-center"
               whileHover={{ scale: 1.1 }}
             >
-              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -164,7 +164,7 @@ const About = () => {
           >
             <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
               <div className="flex items-center space-x-4 mb-6">
-                <Globe className="w-8 h-8 text-purple-600" />
+                <Globe className="w-8 h-8 text-blue-900" />
                 <div>
                   <h4 className="text-xl font-bold text-gray-900">
                     Global Impact
@@ -176,19 +176,19 @@ const About = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">North America</span>
                   <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full w-3/4"></div>
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-950 h-2 rounded-full w-3/4"></div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Europe</span>
                   <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full w-2/3"></div>
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-950 h-2 rounded-full w-2/3"></div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Asia Pacific</span>
                   <div className="w-32 bg-gray-200 rounded-full h-2">
-                    <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full w-1/2"></div>
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-950 h-2 rounded-full w-1/2"></div>
                   </div>
                 </div>
               </div>
@@ -217,7 +217,7 @@ const About = () => {
         transition={{ duration: 0.6, delay: index * 0.2 }}
         viewport={{ once: false, amount: 0.2 }}
       >
-        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white mb-6">
+        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-950 rounded-2xl flex items-center justify-center text-white mb-6">
           {value.icon}
         </div>
         <h4 className="text-xl font-bold text-gray-900 mb-3">
@@ -263,7 +263,7 @@ const About = () => {
                 <h4 className="text-xl font-bold text-gray-900 mb-1">
                   {member.name}
                 </h4>
-                <p className="text-purple-600 font-medium mb-3">
+                <p className="text-blue-800 font-medium mb-3">
                   {member.role}
                 </p>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -283,7 +283,7 @@ const About = () => {
           viewport={{ once: false, amount: 0.2 }}
         >
           <div className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto">
-            <Award className="w-16 h-16 text-purple-600 mx-auto mb-6" />
+            <Award className="w-16 h-16 text-blue-900 mx-auto mb-6" />
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Join Our Journey
             </h3>
@@ -292,7 +292,7 @@ const About = () => {
               passion for building exceptional products. Check out our open
               positions.
             </p>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
+            <button className="bg-gradient-to-r from-blue-500 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
               View Open Positions
             </button>
           </div>

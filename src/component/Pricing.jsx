@@ -76,7 +76,7 @@ const Pricing = () => {
         <div className="text-center mb-16">
          <h2 className="text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-snug">
   Simple, transparent
-  <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+  <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
     pricing for everyone
   </span>
 </h2>
@@ -153,7 +153,7 @@ const Pricing = () => {
 
                 <button className={`w-full py-4 px-6 rounded-full font-semibold transition-all duration-200 mb-8 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:scale-105'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-950 text-white hover:shadow-lg hover:scale-105'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   {plan.monthlyPrice === 0 ? 'Get Started Free' : 'Start Free Trial'}
@@ -185,7 +185,7 @@ const Pricing = () => {
           <p className="text-gray-600 mb-4">
             Need a custom solution for your enterprise?
           </p>
-          <button className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+          <button className="text-blue-900 font-semibold hover:text-blue-700 transition-colors">
             Contact our sales team →
           </button>
         </div>

@@ -91,7 +91,7 @@ const Features = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Everything you need to stay
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
               organized and productive
             </span>
           </motion.h2>

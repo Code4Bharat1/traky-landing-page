@@ -25,7 +25,7 @@ const Hero = () => {
           >
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Stay on Track.
-              <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
                 Crush Your Tasks.
               </span>
             </h1>
@@ -36,7 +36,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-r from-blue-500 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
                 <span>Start for Free</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
