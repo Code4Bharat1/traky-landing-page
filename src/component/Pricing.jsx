@@ -74,12 +74,12 @@ const Pricing = () => {
     <section id="pricing" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Simple, transparent
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              pricing for everyone
-            </span>
-          </h2>
+         <h2 className="text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-snug">
+  Simple, transparent
+  <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+    pricing for everyone
+  </span>
+</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Choose the perfect plan for your needs. Upgrade or downgrade at any time.
           </p>
