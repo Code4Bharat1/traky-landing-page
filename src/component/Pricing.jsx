@@ -65,7 +65,7 @@ const Pricing = () => {
         "API access"
       ],
       limitations: [],
-      color: "from-purple-500 to-pink-500",
+      color: "from-blue-500 to-blue-500",
       popular: false
     }
   ];
@@ -86,13 +86,13 @@ const Pricing = () => {
 
           {/* Billing Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-12">
-            <span className={`text-lg font-medium ${!isAnnual ? 'text-purple-600' : 'text-gray-500'}`}>
+            <span className={`text-lg font-medium ${!isAnnual ? 'text-blue-600' : 'text-gray-500'}`}>
               Monthly
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
               className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors ${
-                isAnnual ? 'bg-purple-600' : 'bg-gray-300'
+                isAnnual ? 'bg-blue-600' : 'bg-gray-300'
               }`}
             >
               <span
@@ -101,7 +101,7 @@ const Pricing = () => {
                 }`}
               />
             </button>
-            <span className={`text-lg font-medium ${isAnnual ? 'text-purple-600' : 'text-gray-500'}`}>
+            <span className={`text-lg font-medium ${isAnnual ? 'text-blue-600' : 'text-gray-500'}`}>
               Annual
             </span>
             <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -115,12 +115,12 @@ const Pricing = () => {
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
-                plan.popular ? 'ring-4 ring-purple-200 scale-105' : ''
+                plan.popular ? 'ring-4 ring-blue-200 scale-105' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center space-x-1">
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-950 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center space-x-1">
                     <Star className="w-4 h-4" />
                     <span>Most Popular</span>
                   </div>
