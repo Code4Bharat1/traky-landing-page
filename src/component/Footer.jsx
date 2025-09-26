@@ -118,10 +118,10 @@ const Footer = () => {
               <span className="font-semibold text-black">NexCoreAlliance</span>. All rights
               reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-md text-gray-900">
-              <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-gray-900 transition-colors">Cookie Policy</a>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-900">
+              <a href="https://admin.traky.in/policy/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
+              <a href="https://admin.traky.in/policy/terms" className="hover:text-gray-900 transition-colors">Terms of Service</a>
+              <a href="https://admin.traky.in/companypolicy" className="hover:text-gray-900 transition-colors">Company Policy</a>
             </div>
           </div>
         </div>

@@ -79,23 +79,28 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
+      className="relative py-20 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ✅ Background Gradient */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-200 via-blue-200 to-white"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 50, rotateX: -10 }}
           whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.2 }} // 👈 triggers on scroll down + up
+          viewport={{ once: false, amount: 0.2 }}
         >
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight md:leading-snug">
-  We're building the future of
-  <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
-    task management
-  </span>
-</h2>
+            We're building the future of
+            <span className="block bg-gradient-to-r from-blue-500 to-blue-950 bg-clip-text text-transparent">
+              task management
+            </span>
+          </h2>
 
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Founded in 2022, Traky was born from the frustration of juggling
@@ -197,40 +202,39 @@ const About = () => {
         </div>
 
         {/* Values */}
-       <div className="mb-20">
-  <div className="text-center mb-16">
-    <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-      Our Values
-    </h3>
-    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-      The principles that guide everything we do
-    </p>
-  </div>
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Values
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    {values.map((value, index) => (
-      <motion.div
-        key={index}
-        className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-shadow duration-300"
-        initial={{ opacity: 0, y: 50, rotateX: -10 }}
-        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-950 rounded-2xl flex items-center justify-center text-white mb-6">
-          {value.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+                initial={{ opacity: 0, y: 50, rotateX: -10 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-950 rounded-2xl flex items-center justify-center text-white mb-6">
+                  {value.icon}
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  {value.title}
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        <h4 className="text-xl font-bold text-gray-900 mb-3">
-          {value.title}
-        </h4>
-        <p className="text-gray-600 leading-relaxed">
-          {value.description}
-        </p>
-      </motion.div>
-    ))}
-  </div>
-</div>
-
 
         {/* Team */}
         <div>
@@ -292,9 +296,9 @@ const About = () => {
               passion for building exceptional products. Check out our open
               positions.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
+            {/* <button className="bg-gradient-to-r from-blue-500 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200">
               View Open Positions
-            </button>
+            </button> */}
           </div>
         </motion.div>
       </div>

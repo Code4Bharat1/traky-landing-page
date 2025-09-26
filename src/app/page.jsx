@@ -1,4 +1,4 @@
-'use client'; // Only needed in app/page.jsx (App Router)
+'use client';
 
 import About from '@/component/About';
 import CTA from '@/component/CTA';
