@@ -22,6 +22,11 @@ const Login = ({ onNavigate }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!isLogin && formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
     if (forgotPassword) {
       console.log("Password reset link sent to:", formData.email);
     } else {
@@ -29,21 +34,28 @@ const Login = ({ onNavigate }) => {
     }
   };
 
-  const handleBackToHome = () => onNavigate('home');
+  const handleBackToHome = () => onNavigate?.('home');
 
   return (
     <section
       id="login"
-      className="min-h-screen flex items-center justify-center py-12 relative"
+      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #E0C3FC 0%, #8EC5FC 50%, #FFFFFF 100%)"
+        background: "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 50%, #ffffff 100%)"
       }}
     >
-      {/* Decorative blobs */}
-      <div className="absolute -top-32 -right-32 w-96 h-96 bg-purple-300 rounded-full opacity-30 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-300 rounded-full opacity-30 blur-3xl"></div>
+      {/* Decorative background effects */}
+      <div className="absolute inset-0 -z-10">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-70"></div>
 
-      <div className="relative z-10 w-full max-w-lg px-6">
+        {/* Animated floating blobs */}
+        <div className="absolute -top-40 -left-32 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delay"></div>
+        <div className="absolute top-1/2 -left-20 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-slow"></div>
+      </div>
+
+      <div className="relative z-10 max-w-md w-full">
         {/* Back button */}
         <div className="mb-6">
           <button
@@ -76,7 +88,7 @@ const Login = ({ onNavigate }) => {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 space-y-6">
+        <div className="bg-white rounded-3xl shadow-xl p-8 space-y-6 backdrop-blur-lg bg-opacity-90">
           <form onSubmit={handleSubmit} className="space-y-5">
             {forgotPassword ? (
               <div>
@@ -159,6 +171,7 @@ const Login = ({ onNavigate }) => {
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      aria-label="Toggle password visibility"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>

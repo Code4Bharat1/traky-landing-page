@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Play, ArrowRight, Calendar, CheckCircle, Clock, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation"; // ✅ Import router
 
 // Bubble Component
 const Bubble = ({ size, delay, duration, initialX, initialY }) => {
@@ -43,21 +44,21 @@ const Bubble = ({ size, delay, duration, initialX, initialY }) => {
 
 const Hero = () => {
   const [bubbles, setBubbles] = useState([]);
+  const router = useRouter(); // ✅ Router hook
 
   useEffect(() => {
     const newBubbles = Array.from({ length: 10 }).map(() => ({
       size: 80 + Math.random() * 120,
       duration: 8 + Math.random() * 8,
       delay: Math.random() * 5,
-      x: Math.random() * window.innerWidth, // unique random start X
-      y: Math.random() * window.innerHeight, // unique random start Y
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
     }));
     setBubbles(newBubbles);
   }, []);
 
   return (
     <section className="relative min-h-screen pt-16 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 overflow-hidden">
-      
       {/* Floating Bubbles */}
       {bubbles.map((b, i) => (
         <Bubble
@@ -91,10 +92,15 @@ const Hero = () => {
             with intelligent task management that adapts to your workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2">
+            {/* ✅ Updated Button */}
+            <button
+              onClick={() => router.push("/login")}
+              className="bg-gradient-to-r from-blue-600 to-blue-950 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2"
+            >
               <span>Start for Free</span>
               <ArrowRight className="w-5 h-5" />
             </button>
+
             <button className="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2 border border-gray-200">
               <Play className="w-5 h-5" />
               <span>Watch Demo</span>
@@ -125,16 +131,16 @@ const Hero = () => {
                 <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <div className="flex-1">
-                    <p className="font-medium text-gray-900 line-through">Review project proposal</p>
-                    <p className="text-sm text-gray-500">Completed 2 hours ago</p>
+                    <p className="font-medium text-gray-900 line-through">Review Project Proposal</p>
+                    <p className="text-sm text-gray-500">Completed 2 Hours Ago</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-500">
                   <Clock className="w-5 h-5 text-blue-500" />
                   <div className="flex-1">
-                    <p className="font-medium text-gray-900">Team standup meeting</p>
-                    <p className="text-sm text-gray-500">Due in 1 hour</p>
+                    <p className="font-medium text-gray-900">Team Standup Meeting</p>
+                    <p className="text-sm text-gray-500">Due in 1 Hour</p>
                   </div>
                 </div>
 
