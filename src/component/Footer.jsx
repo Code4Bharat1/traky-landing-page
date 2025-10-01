@@ -85,10 +85,17 @@ const Footer = () => {
               © 2011 – 2025 <span className="font-semibold text-black">NexCoreAlliance</span>. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-900">
-              <a href="https://admin.traky.in/policy/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
-              <a href="https://admin.traky.in/policy/terms" className="hover:text-gray-900 transition-colors">Terms of Service</a>
-              <a href="https://admin.traky.in/companypolicy" className="hover:text-gray-900 transition-colors">Company Policy</a>
-            </div>
+            <a href="/policy/privacy" className="hover:text-gray-900 transition-colors">
+              Privacy Policy
+            </a>
+            <a href="/policy/terms" className="hover:text-gray-900 transition-colors">
+              Terms of Service
+            </a>
+            <a href="/policy/companypolicy" className="hover:text-gray-900 transition-colors">
+              Company Policy
+            </a>
+          </div>
+
           </div>
         </div>
       </div>

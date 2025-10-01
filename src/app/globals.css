@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
-/* Root variables for light/dark theme */
+/* ===== Prevent double scrollbar ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents any horizontal scrollbar */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ===== Root variables for light/dark theme ===== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,10 +33,12 @@
   }
 }
 
+/* ===== Body styles ===== */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* extra safety */
 }
 
 /* ===== Floating blob animations ===== */
